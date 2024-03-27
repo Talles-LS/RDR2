@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Roboto", sans-serif;
+    overflow: hidden;
+}
+
+#background {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+#background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+#background::after {
+    content: '';
+    width: inherit;
+    height: inherit;
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+}
+
+header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 2rem 5rem;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.27);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.9px);
+    -webkit-backdrop-filter: blur(6.9px);
+}
+
+
+header .navigation {
+    display: flex;
+    gap: 5rem;
+    list-style-type: none;
+}
+
+header .navigation li a {
+    color: white;
+    font-size: 1.4rem;
+    text-decoration: none;
+    align-items: center;
+}
+
+.navigation-end {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.navigation-end button {
+    padding: 1rem 2rem;
+    font-weight: 800;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.527);
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    transition: all .3s ease-in;
+}
+
+.navigation-end button:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.navigation-end img {
+    width: 3rem;
+    cursor: pointer;
+}
+
+.navigation-end .lupa {
+    width: 2.8rem;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    gap: 5rem;
+    padding: 0rem 10rem;
+}
+
+.main-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-info p {
+    text-align: center;
+    color: rgb(241, 241, 241);
+    font-size: 1.8rem;
+    margin: 1rem 7rem;
+}
+
+.logo-arthur {
+    width: 40%;
+}
+
+.buttons {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+
+}
+
+.buttons button {
+    background: transparent;
+    border: 1px solid red;
+    cursor: pointer;
+    color: white;
+}
+
+.buttons a,
+button {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    transform: skew(-10deg);
+}
+
+.buttons a {
+    text-decoration: none;
+    color: white;
+    background-color: red;
+}
+
+@media screen and (max-width: 1365px) {
+    header {
+        flex-direction: column;
+        gap: 2rem;
+
+        .navigation-end {
+            display: none;
+        }
+    }
+}
